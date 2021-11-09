@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+    
+
+<form>
+
+    <input type="text" id="img" placeholder="Enter ImageUrl"/>
+    <input type="text" id="gender"placeholder="Enter Men/Women"/>
+    <input type="text" id="size"   placeholder="Enter Size"/>
+    <input type="text"   id="name"    placeholder="Enter Product Name"/>
+    <input type="number"  id ="price"    placeholder="Enter Price"/>
+    <button type="submit">submit</button>
+</form>
+
+
+
+    
+</body>
+</html>
+
+
+
+<script>
+    document.querySelector("form").addEventListener("submit",addItem);
+    var prod = JSON.parse(localStorage.getItem("shoppingBag")) || [];
+    
+function addItem(){
+    e.preventDefault();
+var productObj ={
+    Image_url:document.getElementById("img").value,
+    gender:document.getElementById("gender").value,
+    size:document.getElementById("size").value,
+    name:document.getElementById("name").value,
+    price:document.getElementById("price").value,
+    
+
+}
+
+prod.push(productObj);
+localStorage.setItem("shoppingBag",JSON.stringify(prod))
+
+
+}
+
+
+var productObj ={
+    Image_url:document.getElementById("img").value,
+    gender:document.getElementById("gender").value,
+    size:document.getElementById("size").value,
+    name:document.getElementById("name").value,
+    price:document.getElementById("price").value,
+    
+
+}
+
+console.log(productObj.name)
+
+
+</script>

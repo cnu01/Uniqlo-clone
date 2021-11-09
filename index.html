@@ -56,7 +56,9 @@ ul.slide{
     margin-left: 50px;
 }
    
-   
+   img{
+     width:20%;
+   }
     
     </style>
 </head>
@@ -90,8 +92,37 @@ ul.slide{
 
 </div>
 
-
-    
 </div>
 </body>
 </html>
+
+
+
+
+<script>
+  var data = JSON.parse(localStorage.getItem("shoppingBag"))
+  displayProd(data)
+  
+  
+  
+  function displayProd(data){
+  data.map(function(item){
+  var img = document.createElement("img");
+  img.setAttribute("src",item.Image_url);
+  var gender = document.createElement("h5");
+  gender.textContent = item.gender;
+  size = document.createElement("h5");
+  size.textContent = item.size;
+  name= document.createElement("h3");
+  name.textContent = item.name;
+  price=document.createElement("h3");
+  price.textContent = item.price
+  console.log(price)
+  document.querySelector("#rightdiv").append(img,gender,size,name,price);
+  });
+  }
+  
+  
+  
+  
+  </script>
