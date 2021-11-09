@@ -6,19 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #container {
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+ }
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.main {
+  margin-left: 200px;
+  font-size: 20px; 
+  padding: 0px 10px;
+}
+
+.active {
+  color: black;
+}
+span::after {
+  float: right;
+  content: "^";
+}
+.dropdown-container {
+  display: none;
+  padding-left: 8px;
+}
+
+#container {
             width: 98%;
             display: grid;
             grid-template-columns: auto auto auto auto;
             grid-gap: 3%;
           }
-    
-          #container > div {
+#container > div {
             box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
               rgba(0, 0, 0, 0.22) 0px 10px 10px;
               width:200px;
           }
-          button {
+   button {
             width: 100%;
             height: 40px;
             font-size: 15px;
@@ -26,13 +62,13 @@
             color: white;
             border: 0;
           }
-        img{
+  img{
             width: 200px;
         }
 
 
 
-        #leftdiv{
+  #leftdiv{
     border: 1px solid green;
     width: 20%;
     height: 2000px;
@@ -41,44 +77,18 @@
     vertical-align: top;
         }
 
-  
-span {
-  color :black;
-  font-size : 1.2em;
-    cursor : pointer;
-  display: block;
-}
-
-span::after {
-  float: right;
-  content: "^";
-}
-.slide {
-
-  width:100%;
-  height:0px;
-  overflow: hidden;
-  
-}
-
-ul.slide{
-    list-style-type: none;
-}
-#touch {
-    position: absolute;
-     opacity: 0;
-      height: 0px;}    
-#touch:checked + .slide {
-    height: 200px;
-}       
-
-        #rightdiv{
+   #rightdiv{
     border: 1px solid green;
     width: 73%;
     height: 2000px;
     display: inline-block;
     margin-left: 50px;
 }    
+
+#men{
+margin-right: 2px;
+padding:5px;
+}
     </style>
 
 </head>
@@ -86,18 +96,137 @@ ul.slide{
 <div>
 
     <div id="leftdiv">
+      
+     
+ 
+        <h1 id="men">MEN</h1>
+ 
         <div>
-            <label for="touch"><span>OUTERWEAR</span></label>               
-            <input type="checkbox" id="touch"> 
-          
-            <ul class="slide">
-              <li>Coats</li> 
-              <li>Blazers</li>
-              <li>Down</li>
-              <li>Fleece</li>
-              <li>Jackets</li>
-            </ul>
+        
+          <div class="sidenav">
+         
+            <button class="dropdown-btn"><span>OUTERWEAR</span> 
+             
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Coats</a>
+              <a href="#">Blazers</a>
+              <a href="#">Down</a>
+              <a href="#">Fleece</a>
+              <a href="#">Jackets</a>
+            </div>
+          </div>
+          <div class="sidenav">
+         
+            <button class="dropdown-btn"><span>TOPS</span> 
+             
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Coats</a>
+              <a href="#">Blazers</a>
+              <a href="#">Down</a>
+              <a href="#">Fleece</a>
+              <a href="#">Jackets</a>
+            </div>
+          </div>
+        
+          <div class="sidenav">
+         
+            <button class="dropdown-btn"><span>BOTTOMS</span> 
+             
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Coats</a>
+              <a href="#">Blazers</a>
+              <a href="#">Down</a>
+              <a href="#">Fleece</a>
+              <a href="#">Jackets</a>
+            </div>
+          </div>
+          <div class="sidenav">
+         
+            <button class="dropdown-btn"><span>INNERWEAR</span> 
+             
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Coats</a>
+              <a href="#">Blazers</a>
+              <a href="#">Down</a>
+              <a href="#">Fleece</a>
+              <a href="#">Jackets</a>
+            </div>
+          </div>
+          <div class="sidenav">
+         
+            <button class="dropdown-btn"><span>LOUNGEWEAR</span> 
+             
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Coats</a>
+              <a href="#">Blazers</a>
+              <a href="#">Down</a>
+              <a href="#">Fleece</a>
+              <a href="#">Jackets</a>
+            </div>
+          </div>
+          <div class="sidenav">
+         
+            <button class="dropdown-btn"><span>ACEESSSORIES</span></button> 
+             
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Coats</a>
+              <a href="#">Blazers</a>
+              <a href="#">Down</a>
+              <a href="#">Fleece</a>
+              <a href="#">Jackets</a>
+            </div>
+          </div>
+          <div class="sidenav">
+         
+            <button class="dropdown-btn"><span>SPORT</span> 
+             
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Coats</a>
+              <a href="#">Blazers</a>
+              <a href="#">Down</a>
+              <a href="#">Fleece</a>
+              <a href="#">Jackets</a>
+            </div>
+          </div>
+          <div class="sidenav">
+         
+            <button class="dropdown-btn"><span>AIRism</span> 
+             
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Coats</a>
+              <a href="#">Blazers</a>
+              <a href="#">Down</a>
+              <a href="#">Fleece</a>
+              <a href="#">Jackets</a>
+            </div>
+          </div>
+          <div class="sidenav">
+         
+            <button class="dropdown-btn"><span>HEATTECH</span> 
+             
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Coats</a>
+              <a href="#">Blazers</a>
+              <a href="#">Down</a>
+              <a href="#">Fleece</a>
+              <a href="#">Jackets</a>
+            </div>
+          </div>
+          <BR>
+          <hr/>
+           
         </div>
+ 
+        
     </div>
     
     
@@ -142,5 +271,33 @@ var data = JSON.parse(localStorage.getItem("shoppingBag"));
       mainDiv.append(imageDiv);
     });
   }
+
+//side bar code
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+
+
+
+
+
+
+
+
+ 
+
+
 
 </script>
