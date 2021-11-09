@@ -100,7 +100,7 @@ ul.slide{
 
 
 <script>
-  var data = JSON.parse(localStorage.getItem("shoppingBag"))
+  var data = JSON.parse(localStorage.getItem("shoppingBag"));
   displayProd(data)
   
   
@@ -113,12 +113,12 @@ ul.slide{
   gender.textContent = item.gender;
   size = document.createElement("h5");
   size.textContent = item.size;
-  name= document.createElement("h3");
-  name.textContent = item.name;
+  name2 = document.createElement("h5");
+  name2.textContent = item.name;
   price=document.createElement("h3");
   price.textContent = item.price
-  console.log(price)
-  document.querySelector("#rightdiv").append(img,gender,size,name,price);
+  
+  document.querySelector("#rightdiv").append(img,gender,size,name2,price);
   });
   }
   
