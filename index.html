@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLO-Tee-Shirts</title>
+    <style>
+#leftdiv{
+    border: 1px solid green;
+    width: 200px;
+    height: 2000px;
+    margin-left: 10px;
+        }
+
+span {
+  color :black;
+  font-size : 1.2em;
+    cursor : pointer;
+  display: block;
+}
+
+span::after {
+  float: right;
+  content: "^";
+}
+.slide {
+
+  width:100%;
+  height:0px;
+  overflow: hidden;
+  
+}
+
+ul.slide{
+    list-style-type: none;
+}
+#touch {
+    position: absolute;
+     opacity: 0;
+      height: 0px;}    
+#touch:checked + .slide {
+    height: 200px;
+}
+
+    </style>
+</head>
+<body>
+    
+<div>
+
+<div id="leftdiv">
+    <div>
+        <label for="touch"><span>OUTERWEAR</span></label>               
+        <input type="checkbox" id="touch"> 
+      
+        <ul class="slide">
+          <li>Coats</li> 
+          <li>Blazers</li>
+          <li>Down</li>
+          <li>Fleece</li>
+          <li>Jackets</li>
+        </ul>
+    </div>
+    
+
+
+
+
+
+
+
+</div>
+<div id="rightdiv"></div>
+
+
+    
+</div>
+</body>
+</html>
