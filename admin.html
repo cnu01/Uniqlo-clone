@@ -28,6 +28,28 @@
 
 
 <script>
+
+
+// var data = [{
+//     Image_url: "https://image.uniqlo.com/UQ/ST3/in/imagesgoods/422987/item/ingoods_41_422987.jpg?width=1600&impolicy=quality_75",
+//     gender:"Male",
+//     size:"XXL",
+//     name:"Srinivas",
+//     price:"200000",
+// }, 
+// ]
+
+
+
+
+
+
+
+
+
+
+
+
     document.querySelector("form").addEventListener("submit",addItem);
     var prod = JSON.parse(localStorage.getItem("shoppingBag")) || [];
     
@@ -44,7 +66,7 @@ var productObj ={
 }
 
 prod.push(productObj);
-localStorage.setItem("shoppingBag",JSON.stringify(prod))
+localStorage.setItem("shoppingBag",JSON.stringify(prod));
 
 
 }
