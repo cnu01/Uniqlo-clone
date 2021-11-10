@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>POLO T-SHIRTS</title>
+    <link rel="icon" href="uniqlo_roman_180.png" type="image/icon type">
     <style>
 
 
 
 
+html, body {
+ height:100%;
+ padding:0;
+ margin:0;
+ overflow-x:hidden;
+} 
 #maincontainer{
   width:80%;
-  
-  margin: auto;
+  margin-top: 50px;
+  border: solid 1px black;
+  margin-right: 5%;
+  margin-left: 10%;
 }
 .sidenav {
-  height: 100%;
   width: 200px;
  }
 .sidenav a, .dropdown-btn {
@@ -54,14 +62,14 @@ span::after {
 #container {
             display: grid;
             grid-template-columns: auto auto auto auto;
-            grid-gap: 3%;
+            column-gap:  3%;
+            row-gap:1%;
            
           }
 #container > div {
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-              rgba(0, 0, 0, 0.22) 0px 10px 10px;
-              width:200px;
-              height:400px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+              width:190px;
+
           }
    button {
             width: 100%;
@@ -72,7 +80,7 @@ span::after {
             border: 0;
           }
           #right-image{
-            width: 200px;
+            width: 190px;
         }
 
 
@@ -85,7 +93,7 @@ span::after {
         }
 
    #rightdiv{
-    width: 75%;
+    width: 65%;
     display: inline-block;
     margin-left: 30px;
 }    
@@ -118,13 +126,42 @@ padding:5px;
   .item{
    margin-right:10px;
    font-weight: bold;
-    
+   margin-top: auto;
   }  
-
+  #price{
+    font-weight: bolder;
+    margin-left: 10px;
+   
+  }
+#name{
+  font-weight: bolder;
+  font-size:15px;
+  margin-left: 10px;
+  margin-bottom: -5px;
+}
+#gender{
+display: inline-block;
+margin-left: 10px;
+margin-right: 52%;
+margin-bottom: -10px;
+margin-top: -10px;
+color: gray;
+}
+#size{
+  display: inline-block;
+  margin-bottom: -15px;
+  margin-top: -10px;
+  color: gray;
+}
     </style>
 
 </head>
 <body>
+
+
+
+
+
 <div id="maincontainer">
   <div>
     
@@ -136,11 +173,11 @@ padding:5px;
         <div class="item">RESULTS</div>  
         <div class="item">SORT BY</div>
         <div class="item">16 Items</div>
-        <div class="select">
-          <select>
+        <div class="select" >
+          <select onchange="sorting()" id="selectprice"> 
             <option hidden>Featured</option>
-           <option>Price: High to Low</option>
-           <option>Price: Low to High</option>
+           <option value="High">Price: High to Low</option>
+           <option value="Low">Price: Low to High</option>
           </select>
           <div class="select__arrow"></div>
         </option>
@@ -300,29 +337,49 @@ var data = JSON.parse(localStorage.getItem("shoppingBag"));
 
 var cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  
-  var mainDiv = document.createElement("div");
+
+function sorting(){
+var selected = document.getElementById("selectprice").value;
+if(selected == "Low"){
+  var prod = data.sort(function(a,b){
+    return a.price-b.price;
+  });
+}
+if(selected == "High"){
+  var prod = data.sort(function(a,b){
+    return b.price-a.price;
+  }) 
+}
+showProducts();
+}
+var mainDiv = document.createElement("div");
   mainDiv.setAttribute("id", "container");
   document.querySelector("#rightdiv").appendChild(mainDiv);
+  
   showProducts();
 
   function showProducts() {
+    document.querySelector("#container").innerHTML="";
     data.map(function (item) {
       var imageDiv = document.createElement("div");
       var img = document.createElement("img");
       img.setAttribute("src", item.Image_url);
       img.setAttribute("id", "right-image");
       var gender = document.createElement("h5");
-        gender.textContent = item.gender;
+      gender.textContent = item.gender;
+      gender.setAttribute("id", "gender");
      size = document.createElement("h5");
     size.textContent = item.size;
+    size.setAttribute("id", "size");
     name2 = document.createElement("h5");
     name2.textContent = item.name;
+    name2.setAttribute("id", "name");
     price=document.createElement("h3");
-    price.textContent = item.price
+    price.textContent = `Rs. ${item.price}`
+    price.setAttribute("id","price")
     var btn1 = document.createElement("button");
     btn1.textContent = "AddtoCart";
-    imageDiv.append(img, gender, size,name2,price, btn1);
+    imageDiv.append(img,gender,size,name2,price, btn1);
     mainDiv.append(imageDiv);
      
     btn1.addEventListener("click",function(){
