@@ -7,6 +7,14 @@
     <title>Document</title>
     <style>
 
+
+
+
+#maincontainer{
+  width:80%;
+  
+  margin: auto;
+}
 .sidenav {
   height: 100%;
   width: 200px;
@@ -44,15 +52,16 @@ span::after {
 }
 
 #container {
-            width: 98%;
             display: grid;
             grid-template-columns: auto auto auto auto;
             grid-gap: 3%;
+           
           }
 #container > div {
             box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
               rgba(0, 0, 0, 0.22) 0px 10px 10px;
               width:200px;
+              height:400px;
           }
    button {
             width: 100%;
@@ -62,178 +71,225 @@ span::after {
             color: white;
             border: 0;
           }
-  img{
+          #right-image{
             width: 200px;
         }
 
 
 
   #leftdiv{
-    border: 1px solid green;
+    
     width: 20%;
-    height: 2000px;
-    margin-left: 10px;
     display: inline-block;
     vertical-align: top;
         }
 
    #rightdiv{
-    border: 1px solid green;
-    width: 73%;
-    height: 2000px;
+    width: 75%;
     display: inline-block;
-    margin-left: 50px;
+    margin-left: 30px;
 }    
 
 #men{
 margin-right: 2px;
 padding:5px;
 }
+
+#aboveimg{
+  width:100%;
+  margin-bottom: 40px;
+}
+#up{
+    display: grid;
+    grid-template-columns: repeat(2,85%);
+    row-gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  select{
+    height:40px;
+    cursor: pointer;
+    padding: 10px 15px;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    appearance: none;
+  }
+  .item{
+   margin-right:10px;
+   font-weight: bold;
+    
+  }  
+
     </style>
 
 </head>
+<body>
+<div id="maincontainer">
+  <div>
+    
+      <img src="polshirt.png" alt="Polo" id ="aboveimg">
 
-<div>
+      <div id="up">
 
-    <div id="leftdiv">
-      
-     
- 
+
+        <div class="item">RESULTS</div>  
+        <div class="item">SORT BY</div>
+        <div class="item">16 Items</div>
+        <div class="select">
+          <select>
+            <option hidden>Featured</option>
+           <option>Price: High to Low</option>
+           <option>Price: Low to High</option>
+          </select>
+          <div class="select__arrow"></div>
+        </option>
+       
+      </div>
+      </div>
+
+
+
+
+      <div id="leftdiv">
         <h1 id="men">MEN</h1>
- 
-        <div>
-        
-          <div class="sidenav">
-         
-            <button class="dropdown-btn"><span>OUTERWEAR</span> 
-             
-            </button>
-            <div class="dropdown-container">
-              <a href="#">Coats</a>
-              <a href="#">Blazers</a>
-              <a href="#">Down</a>
-              <a href="#">Fleece</a>
-              <a href="#">Jackets</a>
-            </div>
-          </div>
-          <div class="sidenav">
-         
-            <button class="dropdown-btn"><span>TOPS</span> 
-             
-            </button>
-            <div class="dropdown-container">
-              <a href="#">Coats</a>
-              <a href="#">Blazers</a>
-              <a href="#">Down</a>
-              <a href="#">Fleece</a>
-              <a href="#">Jackets</a>
-            </div>
-          </div>
-        
-          <div class="sidenav">
-         
-            <button class="dropdown-btn"><span>BOTTOMS</span> 
-             
-            </button>
-            <div class="dropdown-container">
-              <a href="#">Coats</a>
-              <a href="#">Blazers</a>
-              <a href="#">Down</a>
-              <a href="#">Fleece</a>
-              <a href="#">Jackets</a>
-            </div>
-          </div>
-          <div class="sidenav">
-         
-            <button class="dropdown-btn"><span>INNERWEAR</span> 
-             
-            </button>
-            <div class="dropdown-container">
-              <a href="#">Coats</a>
-              <a href="#">Blazers</a>
-              <a href="#">Down</a>
-              <a href="#">Fleece</a>
-              <a href="#">Jackets</a>
-            </div>
-          </div>
-          <div class="sidenav">
-         
-            <button class="dropdown-btn"><span>LOUNGEWEAR</span> 
-             
-            </button>
-            <div class="dropdown-container">
-              <a href="#">Coats</a>
-              <a href="#">Blazers</a>
-              <a href="#">Down</a>
-              <a href="#">Fleece</a>
-              <a href="#">Jackets</a>
-            </div>
-          </div>
-          <div class="sidenav">
-         
-            <button class="dropdown-btn"><span>ACEESSSORIES</span></button> 
-             
-            </button>
-            <div class="dropdown-container">
-              <a href="#">Coats</a>
-              <a href="#">Blazers</a>
-              <a href="#">Down</a>
-              <a href="#">Fleece</a>
-              <a href="#">Jackets</a>
-            </div>
-          </div>
-          <div class="sidenav">
-         
-            <button class="dropdown-btn"><span>SPORT</span> 
-             
-            </button>
-            <div class="dropdown-container">
-              <a href="#">Coats</a>
-              <a href="#">Blazers</a>
-              <a href="#">Down</a>
-              <a href="#">Fleece</a>
-              <a href="#">Jackets</a>
-            </div>
-          </div>
-          <div class="sidenav">
-         
-            <button class="dropdown-btn"><span>AIRism</span> 
-             
-            </button>
-            <div class="dropdown-container">
-              <a href="#">Coats</a>
-              <a href="#">Blazers</a>
-              <a href="#">Down</a>
-              <a href="#">Fleece</a>
-              <a href="#">Jackets</a>
-            </div>
-          </div>
-          <div class="sidenav">
-         
-            <button class="dropdown-btn"><span>HEATTECH</span> 
-             
-            </button>
-            <div class="dropdown-container">
-              <a href="#">Coats</a>
-              <a href="#">Blazers</a>
-              <a href="#">Down</a>
-              <a href="#">Fleece</a>
-              <a href="#">Jackets</a>
-            </div>
-          </div>
-          <BR>
-          <hr/>
+   
+          <div>
+          
+            <div class="sidenav">
            
-        </div>
- 
-        
-    </div>
-    
-    
-    <div id="rightdiv">
-    </div>
-    
-    </div>
+              <button class="dropdown-btn"><span>OUTERWEAR</span> 
+               
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Coats</a>
+                <a href="#">Blazers</a>
+                <a href="#">Down</a>
+                <a href="#">Fleece</a>
+                <a href="#">Jackets</a>
+              </div>
+            </div>
+            <div class="sidenav">
+           
+              <button class="dropdown-btn"><span>TOPS</span> 
+               
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Coats</a>
+                <a href="#">Blazers</a>
+                <a href="#">Down</a>
+                <a href="#">Fleece</a>
+                <a href="#">Jackets</a>
+              </div>
+            </div>
+          
+            <div class="sidenav">
+           
+              <button class="dropdown-btn"><span>BOTTOMS</span> 
+               
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Coats</a>
+                <a href="#">Blazers</a>
+                <a href="#">Down</a>
+                <a href="#">Fleece</a>
+                <a href="#">Jackets</a>
+              </div>
+            </div>
+            <div class="sidenav">
+           
+              <button class="dropdown-btn"><span>INNERWEAR</span> 
+               
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Coats</a>
+                <a href="#">Blazers</a>
+                <a href="#">Down</a>
+                <a href="#">Fleece</a>
+                <a href="#">Jackets</a>
+              </div>
+            </div>
+            <div class="sidenav">
+           
+              <button class="dropdown-btn"><span>LOUNGEWEAR</span> 
+               
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Coats</a>
+                <a href="#">Blazers</a>
+                <a href="#">Down</a>
+                <a href="#">Fleece</a>
+                <a href="#">Jackets</a>
+              </div>
+            </div>
+            <div class="sidenav">
+           
+              <button class="dropdown-btn"><span>ACEESSSORIES</span></button> 
+               
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Coats</a>
+                <a href="#">Blazers</a>
+                <a href="#">Down</a>
+                <a href="#">Fleece</a>
+                <a href="#">Jackets</a>
+              </div>
+            </div>
+            <div class="sidenav">
+           
+              <button class="dropdown-btn"><span>SPORT</span> 
+               
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Coats</a>
+                <a href="#">Blazers</a>
+                <a href="#">Down</a>
+                <a href="#">Fleece</a>
+                <a href="#">Jackets</a>
+              </div>
+            </div>
+            <div class="sidenav">
+           
+              <button class="dropdown-btn"><span>AIRism</span> 
+               
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Coats</a>
+                <a href="#">Blazers</a>
+                <a href="#">Down</a>
+                <a href="#">Fleece</a>
+                <a href="#">Jackets</a>
+              </div>
+            </div>
+            <div class="sidenav">
+           
+              <button class="dropdown-btn"><span>HEATTECH</span> 
+               
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Coats</a>
+                <a href="#">Blazers</a>
+                <a href="#">Down</a>
+                <a href="#">Fleece</a>
+                <a href="#">Jackets</a>
+              </div>
+            </div>
+            <BR>
+            <hr/>
+             
+          </div>
+   
+          
+      </div>
+      
+      
+      <div id="rightdiv">
+      </div>
+      
+      </div>
+</div>
+
+
     </body>
 
 </html>
@@ -255,6 +311,7 @@ var data = JSON.parse(localStorage.getItem("shoppingBag"));
       var imageDiv = document.createElement("div");
       var img = document.createElement("img");
       img.setAttribute("src", item.Image_url);
+      img.setAttribute("id", "right-image");
       var gender = document.createElement("h5");
         gender.textContent = item.gender;
      size = document.createElement("h5");
@@ -275,9 +332,8 @@ var data = JSON.parse(localStorage.getItem("shoppingBag"));
 //side bar code
 
 var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
 
-for (i = 0; i < dropdown.length; i++) {
+for (var i = 0; i < dropdown.length; i++) {
   dropdown[i].addEventListener("click", function() {
   this.classList.toggle("active");
   var dropdownContent = this.nextElementSibling;
@@ -288,16 +344,4 @@ for (i = 0; i < dropdown.length; i++) {
   }
   });
 }
-
-
-
-
-
-
-
-
- 
-
-
-
 </script>
