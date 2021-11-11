@@ -7,9 +7,7 @@
     <title>Admin</title>
 </head>
 <body>
-    
-
-<form>
+    <form>
 
     <input type="text" id="img" placeholder="Enter ImageUrl"/>
     <input type="text" id="gender"placeholder="Enter Men/Women"/>
@@ -18,59 +16,7 @@
     <input type="number"  id ="price"    placeholder="Enter Price"/>
     <button type="submit">submit</button>
 </form>
-
-
-
-    
 </body>
+<script src="scripts.js"></script>
 </html>
 
-
-
-<script>
-
-
-// var data = [{
-//     Image_url: "https://image.uniqlo.com/UQ/ST3/in/imagesgoods/422987/item/ingoods_41_422987.jpg?width=1600&impolicy=quality_75",
-//     gender:"Male",
-//     size:"XXL",
-//     name:"Srinivas",
-//     price:"200000",
-// }, 
-// ]
-
-
-
-
-
-
-
-
-
-
-
-
-    document.querySelector("form").addEventListener("submit",addItem);
-    var prod = JSON.parse(localStorage.getItem("shoppingBag")) || [];
-    
-function addItem(e){
-    e.preventDefault();
-var productObj ={
-    Image_url:document.getElementById("img").value,
-    gender:document.getElementById("gender").value,
-    size:document.getElementById("size").value,
-    name:document.getElementById("name").value,
-    price:document.getElementById("price").value,
-    
-
-}
-
-prod.push(productObj);
-localStorage.setItem("shoppingBag",JSON.stringify(prod));
-
-
-}
-
-
-
-</script>
