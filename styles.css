@@ -1,3 +1,125 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+#Navbar2 {
+	width: 100vw;
+	height: 80px;
+	border: 1px solid gray;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 30px;
+	background-color: white;
+	box-shadow: 4px 7px 38px -27px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 4px 7px 38px -27px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 4px 7px 38px -27px rgba(0, 0, 0, 0.75);
+	z-index: 100;
+	position: fixed;
+}
+.logo {
+	height: 70px;
+}
+.left-sidebar {
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.menu > .sumanspan {
+	padding: 10px;
+}
+.menu > .sumanspan > a {
+	font-weight: 700;
+	text-decoration: none;
+	color: black;
+}
+.right-sidebar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.search-bar {
+	margin-right: 30px;
+	border: 1px solid black;
+}
+.search-bar > input,
+a {
+	padding: 10px;
+	border: none;
+	outline: none;
+}
+.icon > .sumanspan {
+	padding: 20px;
+	font-size: 1.75rem;
+}
+.icon > .sumanspan > a {
+	color: black;
+}
+
+/* footer */
+.footer {
+	margin-top: 9rem;
+	padding: 1.25rem;
+	width: 100%;
+	background-color: #f4f4f4;
+}
+.footer > h3 {
+	padding: 0px 0px 30px 50px;
+}
+.footer-wrap {
+	display: flex;
+	background-color: #f4f4f4;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 1.75rem;
+}
+.footer-wrap > div {
+	width: 18%;
+	min-width: 250px;
+}
+.footer-wrap > div > h3 {
+	margin-bottom: 1.25rem;
+	padding-left: 0.75rem;
+}
+.footer-wrap > div > p {
+	margin-bottom: 1.25rem;
+	padding-left: 0.75rem;
+	line-height: 1.45rem;
+}
+#E-news > a {
+	color: black;
+	font-weight: bold;
+	font-size: 0.95rem;
+}
+#uniqlo-icon {
+	width: 22%;
+}
+#uniqlo-icon > div {
+	margin-left: 0.75rem;
+}
+#uniqlo-icon > div > i {
+	font-size: 2.75rem;
+	color: gray;
+	margin-right: 1.25rem;
+}
+.footer-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid black;
+	padding: 1.25rem;
+	color: gray;
+}
+.footer-bottom a {
+	color: gray;
+}
+
+/*Except footer and Navbar*/
+
 html,
 body {
 	height: 100%;
@@ -5,11 +127,11 @@ body {
 	margin: 0;
 	overflow-x: hidden;
 }
-#maincontainer {
+#maincontainer2 {
 	width: 85%;
 	margin-top: 50px;
 	margin-right: 5%;
-	margin-left: 5%;
+	margin-left: 7%;
 }
 .sidenav {
 	width: 200px;
@@ -30,7 +152,7 @@ body {
 }
 
 .main {
-	margin-left: 200px;
+	margin-left: 300px;
 	font-size: 20px;
 	padding: 0px 10px;
 }
@@ -38,7 +160,7 @@ body {
 .active {
 	color: black;
 }
-span::after {
+#srinuspan::after {
 	margin-right: -30px;
 	float: right;
 	content: '^';
@@ -48,13 +170,13 @@ span::after {
 	padding-left: 8px;
 }
 
-#container {
+#container2 {
 	display: grid;
 	grid-template-columns: auto auto auto auto;
 	column-gap: 3%;
-	row-gap: 1%;
+	row-gap: 2%;
 }
-#container > div {
+#container2 > div {
 	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 	width: 190px;
 }
@@ -90,6 +212,7 @@ button {
 #aboveimg {
 	width: 100%;
 	margin-bottom: 40px;
+	margin-top: 60px;
 }
 #up {
 	display: grid;
@@ -114,32 +237,29 @@ select {
 #price {
 	font-weight: bolder;
 	margin-left: 10px;
+	margin-bottom: 15px;
 }
 #name {
 	font-weight: bolder;
 	font-size: 15px;
 	margin-left: 10px;
-	margin-bottom: -5px;
+	margin-bottom: 15px;
 }
 #gender {
 	display: inline-block;
 	margin-left: 10px;
 	margin-right: 52%;
-	margin-bottom: -10px;
+	margin-bottom: 20px;
 	margin-top: -10px;
 	color: gray;
 }
 #size {
 	display: inline-block;
-	margin-bottom: -15px;
+	margin-bottom: 20px;
 	margin-top: -10px;
 	color: gray;
 }
 
-hr {
-	width: 60%;
-	text-align: left;
-}
 #space {
 	border: 1px solid gray;
 	width: 60%;

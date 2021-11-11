@@ -22,13 +22,13 @@ if(selected == "High"){
 showProducts();
 }
 var mainDiv = document.createElement("div");
-  mainDiv.setAttribute("id", "container");
+  mainDiv.setAttribute("id", "container2");
   document.querySelector("#rightdiv").appendChild(mainDiv);
   
   showProducts();
 
   function showProducts() {
-    document.querySelector("#container").innerHTML="";
+    document.querySelector("#container2").innerHTML="";
     data.map(function (item) {
       var imageDiv = document.createElement("div");
       var img = document.createElement("img");
@@ -176,8 +176,6 @@ size: "S-XXL",
 }, 
 ]
 
-
-console.log(data)
 
 
 
