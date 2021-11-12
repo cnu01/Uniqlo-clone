@@ -82,7 +82,6 @@ for (var i = 0; i < dropdown.length; i++) {
 
 //Admin Script
 
-
 var data = [{
     Image_url: "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/442821/item/goods_56_442821.jpg?width=1008&impolicy=quality_75",
 gender: "Men",
@@ -181,10 +180,6 @@ size: "S-XXL",
 
 
 localStorage.setItem("shoppingBag",JSON.stringify(data));
-
-
-
-
 document.querySelector("form").addEventListener("submit",addItem);
 var prod = JSON.parse(localStorage.getItem("shoppingBag")) || [];
 
@@ -196,12 +191,13 @@ gender:document.getElementById("gender").value,
 size:document.getElementById("size").value,
 name:document.getElementById("name").value,
 price:document.getElementById("price").value,
-
-
 }
-
 prod.push(productObj);
 localStorage.setItem("shoppingBag",JSON.stringify(prod));
-
-
 }
+
+
+
+
+// Payment page
+
