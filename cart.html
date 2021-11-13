@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/aa6d8f6c48.js" crossorigin="anonymous"></script>
+    <link rel = "icon" href = 
+"uniqlo_roman_180.png" 
+        type = "image/x-icon">
+    <title>Cart</title>
+
+    <style>
+
+html,
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+    
+        button{
+            margin-bottom: 10px;
+        }
+        #cartdiv{
+            width: 100%;
+            margin-top: 100px;
+            margin-bottom:20px;
+            margin-left: 40px;
+        }
+#cartcontainer {
+display: grid;
+grid-template-columns: auto auto auto auto;
+column-gap: 1%;
+row-gap: 2%;
+}
+#cartcontainer > div {
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+	width: 190px;
+}
+
+#cartright-image {
+	width: 190px;
+}
+
+#cartprice {
+	font-weight: bolder;
+	margin-left: 10px;
+	margin-bottom: 15px;
+}
+#cartname {
+	font-weight: bolder;
+	font-size: 15px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+}
+#cartgender {
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 52%;
+	margin-bottom: 20px;
+	margin-top: -10px;
+	color: gray;
+}
+#cartsize {
+	display: inline-block;
+	margin-bottom: 20px;
+	margin-top: -10px;
+	color: gray;
+}
+#total{
+    margin-bottom:100px;
+    text-align: right;
+    margin-right: 80px;
+    
+}
+#checkout{
+    margin-top:50px;
+    margin-left:50px;
+    margin-bottom:200px;
+    text-align:right;
+    text-emphasis: none;
+    font-size:30px;
+    padding:10px;
+    background-color: black;
+    color:white;
+}
+#Coupon1{
+    margin-bottom:10px;
+    margin-left: 77%;  
+}
+
+#shoppingcart{
+   font-size:25px;
+   margin-left: 50px;
+   margin-top: 100px;
+
+}
+
+
+
+/**/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+#Navbar2 {
+	width: 100vw;
+	height: 80px;
+	border: 1px solid gray;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 30px;
+	background-color: white;
+	box-shadow: 4px 7px 38px -27px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 4px 7px 38px -27px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 4px 7px 38px -27px rgba(0, 0, 0, 0.75);
+	z-index: 100;
+	position: fixed;
+}
+.logo {
+	height: 70px;
+}
+.left-sidebar {
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.menu > .sumanspan {
+	padding: 10px;
+}
+.menu > .sumanspan > a {
+	font-weight: 700;
+	text-decoration: none;
+	color: black;
+}
+.right-sidebar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.search-bar {
+	margin-right: 30px;
+	border: 1px solid black;
+}
+.search-bar > input,
+a {
+	padding: 10px;
+	border: none;
+	outline: none;
+}
+.icon > .sumanspan {
+	padding: 20px;
+	font-size: 1.75rem;
+}
+.icon > .sumanspan > a {
+	color: black;
+}
+
+/* footer */
+.footer {
+	padding: 1.25rem;
+	width: 100%;
+	background-color: #f4f4f4;
+}
+.footer > h3 {
+	padding: 0px 0px 30px 50px;
+}
+.footer-wrap {
+	display: flex;
+	background-color: #f4f4f4;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 1.75rem;
+}
+.footer-wrap > div {
+	width: 18%;
+	min-width: 250px;
+}
+.footer-wrap > div > h3 {
+	margin-bottom: 1.25rem;
+	padding-left: 0.75rem;
+}
+.footer-wrap > div > p {
+	margin-bottom: 1.25rem;
+	padding-left: 0.75rem;
+	line-height: 1.45rem;
+}
+#E-news > a {
+	color: black;
+	font-weight: bold;
+	font-size: 0.95rem;
+}
+#uniqlo-icon {
+	width: 22%;
+}
+#uniqlo-icon > div {
+	margin-left: 0.75rem;
+}
+#uniqlo-icon > div > i {
+	font-size: 2.75rem;
+	color: gray;
+	margin-right: 1.25rem;
+}
+.footer-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid black;
+	padding: 1.25rem;
+	color: gray;
+}
+.footer-bottom a {
+	color: gray;
+}
+
+</style>
+</head>
+<body>
+
+
+    <div id="navDiv1">
+        <nav id="Navbar2">
+            <div class="left-sidebar">
+                <a href="index.html"><img class="logo" src="uniqlo-logo.jpg" alt="logo"></a>
+                <div class="menu">
+                  <span class="sumanspan"><a href="Product.html">WOMEN</a></span>
+                  <span class="sumanspan"><a href="Product.html">MEN</a></span>
+                  <span class="sumanspan"><a href="Product.html">KIDS</a></span>
+                  <span class="sumanspan"><a href="Product.html">BABY</a></span>
+                </div>
+            </div>
+            <div class="right-sidebar">
+                <div class="search-bar">
+                  <input type="text"  id="sumaninput" placeholder="Search by keywords">
+                  <a href=""><i class="fas fa-search"></i></a>
+                </div>
+                <div class="icon">
+                  <span class="sumanspan"><a href="LogIn.html"><i class="far fa-user"></i></a></span>
+                  <span class="sumanspan"><a href=""><i class="far fa-heart"></i></a></span>
+                  <span class="sumanspan"><a href="cart.html"><i class="fas fa-cart-plus"></i></a></span>
+                </div>
+            </div>
+        </nav>
+      </div>
+      
+
+
+
+      <div id="shoppingcart"><h1 >SHOPING CART</h1></div>
+    <div id="cartdiv">
+        
+    </div>
+    <hr>
+    <diV id="total"></diV>
+    <label for="Coupon" id = "Coupon1" >Coupon : </label>
+    <input type="text" id="Coupon"placeholder="Apply Coupon"/>
+    <button type="submit">Submit</button>
+    <br>
+    <hr>
+    <button type="submit" id ="checkout">Continue shopping</button>
+
+    <div class="footer">
+        <div class="footer-wrap">
+          <div>
+             <h3>About Uniqlo</h3>
+             <p>information</p>
+             <p>store Location</p>
+          </div>
+          <div>
+              <h3>Help</h3>
+              <p>FAQ</p>
+              <p>Return Policy</p>
+              <p>Privacy Policy</p>
+              <p>Accessibility</p>
+          </div>
+          <div>
+             <h3>Account</h3>
+             <p>Membership</p>
+             <p>Profile</p>
+             <p>Coupons</p>
+          </div>
+          <div id="E-news">
+             <h3>E-Newsletter</h3>
+             <p>sigh up and be the first in-the know about new arrivals,promotions,in-store events and more. </p>
+             <a href="">SUBSCRIBE NOW</a>
+          </div>
+          <div  id="uniqlo-icon" >
+             <h3>UNIQLO SOCIAL ACCOUNT</h3>
+             <div>
+               <i class="fab fa-facebook-square"></i>
+               <i class="fab fa-twitter-square"></i>
+               <i class="fab fa-instagram-square"></i>
+               <i class="fab fa-youtube-square"></i>
+             </div>
+          </div>
+        </div>
+        <h3>English</h3>
+        <div class="footer-bottom">
+            <p>Copyright © UNIQLO Co., Ltd. All rights reserved.</p>
+            <div>
+               <a href="">Terms of use</a>
+               <a href="">Privacy Policy</a>
+            </div>
+        </div>
+     </div>
+</body>
+</html>
+
+
+<script>
+
+var cartitems = JSON.parse(localStorage.getItem('cart'));
+
+
+var mainDiv = document.createElement("div");
+  mainDiv.setAttribute("id", "cartcontainer");
+  document.querySelector("#cartdiv").appendChild(mainDiv);
+  
+  showProducts();
+
+  
+
+  function showProducts() {
+    cartitems.map(function (item) {
+      var imageDiv = document.createElement("div");
+      var img = document.createElement("img");
+      img.setAttribute("src", item.Image_url);
+      img.setAttribute("id", "cartright-image");
+      var gender = document.createElement("h5");
+      gender.textContent = item.gender;
+      gender.setAttribute("id", "cartgender");
+     size = document.createElement("h5");
+    size.textContent = item.size;
+    size.setAttribute("id", "cartsize");
+    name2 = document.createElement("h5");
+    name2.textContent = item.name;
+    name2.setAttribute("id", "cartname");
+    price=document.createElement("h3");
+    price.textContent = `Rs. ${item.price}`
+    price.setAttribute("id","cartprice")
+   
+    imageDiv.append(img,gender,size,name2,price);
+    mainDiv.append(imageDiv);
+     
+   
+    });
+
+  }
+
+  
+
+var total = cartitems.reduce(function(ac,cl){
+    return ac+Number(cl.price)
+},0);
+
+ document.querySelector("#total").innerHTML = `<h3>Your Cart Total is : ${total}<h3>`
+
+document.querySelector("button").addEventListener("click",bT);
+function bT(){
+    var coupon = document.querySelector("#Coupon").value;
+    if(coupon == "masai30"){
+        var a = total*(30/100);
+    document.querySelector("#total").innerHTML = `<h3>After applying the Coupon Your Cart Total is : ${total-a}<h3>`
+    }
+}
+
+
+document.querySelector("#checkout").addEventListener("click",checkOut);
+
+function checkOut(){
+    window.location.href="payment.html"
+}
+
+
+</script>
