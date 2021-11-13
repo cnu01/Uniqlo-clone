@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+.upperNav{
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 40px;
+}
+#log_Pic1{
+    width:100px;
+}
+
+.navbar{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+}
+
+.nav-list{
+    background-color: yellowgreen;
+    width: 100%;
+    display: flex;
+}
+
+.nav-list>li{
+    padding: 30px;
+    list-style: none;
+}
+
+.nav-list>li>a{
+    text-decoration: none;
+}
+
+.nav-list>li>a:hover{
+    text-decoration: none;
+    color: yellow;
+}
+
+.heading{
+    padding: 30px;
+    margin-left: 50px;
+    display: flex;
+}
+
+i{
+    margin-left: 682px;
+    margin-top: px;
+    font-size: 27px;
+}
+
+.box{
+    border: 1px solid rgb(182, 174, 174);
+    width: 75%;
+    height: 870px;
+    margin: 28px;    
+    margin-left: 79px;
+
+}
+
+.box1{
+    display: flex;
+    /* border: 1px solid rgb(250, 233, 3); */
+
+}
+
+.left{
+    width: 80%;
+    padding: 20px;
+    /* border: 1px solid blue; */
+
+}
+
+.right{
+    padding: 20px;
+    color: red;
+    margin-left: 320px;  
+    /* border: 1px solid blue; */
+
+}
+
+form{
+    padding: 20px;
+}
+
+
+.title{
+    margin-left: 10px;    
+}
+
+.input{
+    position: relative;
+    left: 300px;
+    top: -30px;
+    width: 55%;
+    height: 40px;
+    background-color: #f7f7f7;
+    border: 0px;
+    border-bottom: 2px solid rgb(182, 174, 174);
+}
+
+.smlTxt{
+    position: relative;
+    font-size: 14px;
+    left: 300px;
+    top: -25px;
+    max-width: 55%;
+    color: rgb(117, 117, 117);
+}
+
+.radio{
+    margin-left: 80px;
+    position: relative;
+    left: 220px;
+    top: -20px;
+}
+
+.subscribe{
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+}
+
+.sub{
+    margin-left: 20px;
+    padding: 10px;
+
+}
+
+.uniqlo{
+    margin-left: 5px;
+}
+
+.check{
+    margin-left: 31px;
+    margin-bottom: 30px;
+}
+
+.policy{
+    color: rgb(117, 117, 117);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 31px;
+
+}
+.Tnc{
+    color: rgb(117, 117, 117);
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+
+
+.terms{
+    
+    margin-left: 10px;   
+}
+
+.terms li{
+    list-style: none;
+    
+}
+
+.terms li a{
+    color: black;
+    margin-left: 30px;
+    font-weight: bolder;
+}
+
+.terms li a:hover{
+    color: rgb(117, 117, 117);
+}
+
+.button{
+    padding: 10px;
+    width: 350px;
+    background-color: black;
+    color: white;
+    margin-top: 28px;
+    margin-left: 25px;
+    cursor: pointer;
+    border: none;   
+}
