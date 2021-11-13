@@ -1,0 +1,347 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/greyzz.png");
+    width: 100vw;
+    height: 100vh;
+}
+nav{
+    width: 100vw;
+    height: 80px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+    background-color:white;
+    box-shadow: 4px 7px 38px -27px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 7px 38px -27px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 7px 38px -27px rgba(0,0,0,0.75);
+    z-index: 100;
+    position: fixed;
+}
+.logo{
+    height: 70px;
+}
+.left-sidebar{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.menu>span{
+    padding: 10px;
+}
+.menu>span>a{
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+.right-sidebar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-bar{
+    margin-right: 30px;
+    border: 1px solid black;
+}
+.search-bar>input,a{
+    padding: 10px;
+    border:none;
+    outline: none;
+}
+.icon>span{
+    padding: 20px;
+    font-size: 1.75rem;
+}
+.icon>span>a{
+    color: black;
+}
+/* =================style the main page===================== */
+#container{
+    width: 92vw;
+    position:relative;
+    left:4%;
+    top: 10%;
+   
+}
+/* ==============section1==================================== */
+
+.slides{
+    display: none
+}
+.slides>img{
+    cursor: pointer;
+}
+.slide-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: gray;
+    font-weight: bold;
+    font-size: 1.75rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(255, 255, 255, 0.582);
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: gray;
+    color: white;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+   
+.active, .dot:hover {
+    background-color:black;
+}
+/* ===========================================section2 ==============================================*/
+.section2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.582);
+    margin: 2.25rem 0px;
+}
+.section2>div{
+    font-size: 1.25rem;
+}
+.section2 span{
+    padding-right: 1.25rem;
+}
+.section2 h3{
+    margin-bottom: .75rem;
+    font-size: 1.25rem;
+}
+.section2 a{
+    color: black;
+    font-weight:700;
+}
+.new-arival,.sale{
+    border-right: 1px solid black;
+}
+/* =========================section 3================================= */
+.section3 h1{
+    margin: 4rem 0;
+}
+.topics{
+    display: flex;
+    
+}
+.topics h3{
+    margin-bottom: 1rem;
+}
+.topic-img{
+    width:15%;
+    height: 15%;
+    /* object-fit: cover; */
+}
+.topic-content{
+    width: 25%;
+    margin-left:2.25rem;
+    text-align: left;
+}
+.topic-content>p{
+    line-height: 1.45rem;
+}
+.gap{
+    margin-top: 8rem;
+}
+/* ========section4======================================================== */
+.section4{
+    margin-top: 4rem;
+}
+.gallery h1{
+    margin-bottom: 1.75rem;
+}
+.gallery-holder{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.gallery-content{
+    width: 48%;
+    min-width:300px;
+}
+.gallery-content>div{
+    padding: 1.2rem 2rem;
+    line-height: 1.45rem;
+}
+/* =======section 5-8================= */
+.section5{
+    margin-top: 7rem;
+}
+.section6,.section7,.section8{
+    margin-top: 7rem;
+}
+.ut-collection{
+    text-align: center;
+    padding: 1.75rem;
+}
+.ut-collection>a{
+    color: black;
+    font-weight: bold;
+}
+/* =================section9-10=========================== */
+.section9,.section10{
+    margin-top: 5rem;
+}
+.wrap-image{
+    width: 300px;
+    height: 400px;
+}
+.image-wrapper{
+    margin-top: 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.wrap-content{
+    padding: 20px 0px 10px 0px;
+    text-align: left;
+}
+/* ============section 11-12 =====================================*/
+.section11,.section12{
+   margin-top: 7rem;
+}
+.section11>h1{
+    margin-bottom: 3rem;
+}
+.section12>h1{
+    margin-bottom: 3rem;
+}
+.collect-content{
+    display: flex;
+    border-bottom: 1px solid gray;
+    padding: 1.25rem 0;
+}
+.collect-content:nth-child(4){
+    border: none;
+}
+.collect-content>img{
+    width: 220px;
+    height: 220px;
+}
+.collect-context{
+    margin-left: 2rem;
+}
+.collect-context h3,p{
+    margin-bottom: 0.75rem;
+}
+.see-more{
+    text-align: center;
+}
+.see-more>a{
+    color: black;
+    font-weight: bold;
+}
+/* ====section13========================== */
+.section13{
+  margin-top: 4rem;
+  margin-bottom: 10rem;
+}
+.news-container{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.section13 h1{
+    margin-bottom: 4rem;
+}
+.section13 a{
+   color: gray;
+   font-size:18px;
+   font-weight: 700;
+   text-decoration: none;
+}
+
+
+
+/* ====footer==================================== */
+.footer{
+    margin-top: 9rem;
+    padding: 1.25rem;
+    width: 100%;
+    background-color:#F4F4F4;
+}
+.footer>h3{
+    padding:0px 0px 30px 50px;
+}
+.footer-wrap{
+    display: flex;
+    background-color:#F4F4F4;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.75rem;
+}
+.footer-wrap>div{
+    width: 18%;
+    min-width: 250px;
+}
+.footer-wrap>div>h3{
+    margin-bottom: 1.25rem;
+    padding-left: 0.75rem;
+}
+.footer-wrap>div>p{
+    margin-bottom: 1.25rem;
+    padding-left: 0.75rem;
+    line-height: 1.45rem;
+}
+#E-news>a{
+    color: black;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+#uniqlo-icon{
+    width: 22%;
+}
+#uniqlo-icon>div{
+    margin-left: 0.75rem;
+}
+#uniqlo-icon>div>i{
+    font-size: 2.75rem;
+    color: gray;
+    margin-right: 1.25rem;
+}
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid black;
+    padding:1.25rem;
+    color: gray;
+}
+.footer-bottom a{
+    color: gray;
+}
