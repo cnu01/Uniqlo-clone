@@ -1,0 +1,138 @@
+#log_Page{
+    margin-left: 100px;
+    margin-top: 60px;
+    }
+    #log_Pic1{
+    width:100px;
+    }
+    #main_Div{
+         /* border:1px solid black; */
+         /* height: 600px; */
+         width:90vw;
+         margin: auto;
+         display: flex;
+         justify-content:space-around;
+         border: 1px solid black;
+         margin: 80px auto;
+         padding: 20px;
+     }
+     #log_In, #creat_Acc{
+         /* border:1px solid red; */
+         height: 98%;
+         width: 46%;
+         
+     }
+     #text > h1{
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+         font-size: 35px;
+         margin-left:30px;
+     }
+     #text > p{
+         margin-left:30px;
+         font-size:19px;
+         margin-bottom:40px;
+     }
+     #btn{
+         margin: 0;
+     }
+     button{
+         height:50px;
+         width:300px;
+         background-color:black;
+         color: white;
+         font-weight: 700;
+         margin-left: 30px;
+         cursor: pointer;
+         border: none;
+     }
+     button:hover{
+         background-color:grey;
+     }
+     #log_Div, #log_Div2{
+         display:flex;
+         justify-content: space-between;
+     }
+     #log_Div>p{
+         color: mediumaquamarine;
+     }
+     #log_Div2 p{
+         font-size:20px;
+     }
+     #red_line{
+         font-size:20px;
+         line-height:20px;
+         color:red;
+     }
+     #grey_line{
+        font-size:15px;
+         line-height:20px;
+         color:grey;
+     }
+     #loginForm{
+         display: grid;
+         width: 50%;
+         line-height:30px;
+     }
+     #loginForm > input{
+         border: 2px solid black;
+         border-radius:5px;
+         height: 20px;
+     }
+     /* ==============footer============================= */
+     .footer{
+        margin-top: 4rem;
+        padding: 1.25rem;
+        width: 100%;
+        background-color:#F4F4F4;
+    }
+    .footer>h3{
+        padding:0px 0px 30px 50px;
+    }
+    .footer-wrap{
+        display: flex;
+        background-color:#F4F4F4;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 1.75rem;
+    }
+    .footer-wrap>div{
+        width: 18%;
+        min-width: 250px;
+    }
+    .footer-wrap>div>h3{
+        margin-bottom: 1.25rem;
+        padding-left: 0.75rem;
+    }
+    .footer-wrap>div>p{
+        margin-bottom: 1.25rem;
+        padding-left: 0.75rem;
+        line-height: 1.45rem;
+    }
+    #E-news>a{
+        color: black;
+        font-weight: bold;
+        font-size: 0.95rem;
+    }
+    #uniqlo-icon{
+        width: 22%;
+    }
+    #uniqlo-icon>div{
+        margin-left: 0.75rem;
+    }
+    #uniqlo-icon>div>i{
+        font-size: 2.75rem;
+        color: gray;
+        margin-right: 1.25rem;
+    }
+    .footer-bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid black;
+        padding:1.25rem;
+        color: gray;
+    }
+    .footer-bottom a{
+        color: gray;
+    }
+    
