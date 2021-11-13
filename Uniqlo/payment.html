@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href = 
+"uniqlo_roman_180.png" 
+        type = "image/x-icon">
+    <title>Payee</title>
+    <style>
+        #containerpayment {
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 100px;
+            border: 1px solid black;
+            width: 30%;
+            padding: 100px;
+            padding-left: 250px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+            rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+            rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+            rgba(0, 0, 0, 0.17) 0px 12px 13px,
+             rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        #para{
+            text-align: center;
+            margin: top 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="para">
+        <h1>Payment</h1>
+    </div>
+
+    <div id="containerpayment">
+        <form>
+            <label for="name">Name On The Card : </label>
+            <br/><br/>
+            <input type="text" id="name" placeholder="Name"/>
+            <br/><br/>
+            <label for="Card">Card Number : </label>
+            <br/><br/>
+            <input type="number" id = "card" placeholder="Card Number"/>
+            <br><br/>
+            <lable>Expiry date : </lable>
+            <br/><br/>
+             <select id="month">
+                 <option value="month">Mo</option>
+                <option value="01">1</option>
+                <option value="02">2</option>
+                <option value="03">3</option>
+                <option value="04">4</option>
+                <option value="05">5</option>
+                <option value="06">6</option>
+                <option value="07">7</option>
+                <option value="08">8</option>
+                <option value="09">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+        </select>
+        <select id="year">
+            <option value="Year">Yr</option>
+           <option value="01">2021</option>
+           <option value="02">2022</option>
+           <option value="03">2023</option>
+           <option value="04">2024</option>
+           <option value="05">2025</option>
+           <option value="06">2026</option>
+           <option value="07">2027</option>
+           <option value="08">2028</option>
+           <option value="09">2029</option>
+           <option value="10">2030</option>
+           <option value="11">2031</option>
+           <option value="12">2032</option>
+        </select>
+        <br/><br/>
+        <label for="Cvv">Cvv : </label>
+        <br/><br/>
+        <input type="number" id="cvv" placeholder="Cvv"/>
+        <br><br>
+        <br><br>
+        <button type="submit" id="submit" >Submit</button>
+        </form>
+    </div>
+
+
+
+    <script>
+        document.querySelector("form").addEventListener("submit",payment);
+
+function payment(e){
+    e.preventDefault();
+    var name = document.getElementById("name").value;
+    var card = document.getElementById("card").value;
+    var expyr = document.getElementById("year").value;
+    var expmo = document.getElementById("month").value;
+    var cvv = document.getElementById("cvv").value;
+    var cardlen = 0;
+    var cvvlen = 0;
+    for(var i = 0 ; i<card.length ; i++){
+        cardlen++;
+    }
+    for(var i = 0 ; i<cvv.length ; i++){
+        cvvlen++;
+    }
+    if(cardlen == 16 && cvvlen == 3 && expyr != "Year" && expmo != "month" && name.length != 0){
+        window.location.href = "otp.html"
+    }else{
+        alert("Card Details are Wrong")
+    }
+
+}
+    </script>
+</body>
+</html>

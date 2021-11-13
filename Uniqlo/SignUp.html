@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eb173574ae.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="signUp.css">
+    <title>Signup</title>
+</head>
+
+<body>
+    <div class="upperNav">
+    </div>
+    <nav class="navbar">
+        <a href="index.html"><img id="log_Pic1"
+            src="https://www.nicepng.com/png/detail/182-1824587_uniqlo-logo-uniqlo-logo-jpg.png" alt="">
+        </a>
+    </nav>
+    <hr>
+
+    <div class="heading">
+        <h1>CREATE AN ACCOUNT</h1>
+        <i class="fas fa-lock"></i>
+
+    </div>
+
+    <div class="box">
+        <div class="box1">
+            <div class="left">
+                <p>You will receive the confirmation mail to your email address associated with account. Please make
+                    sure to check your incoming email from us.
+                </p>
+            </div>
+            <div class="right">
+                <h3>Required*</h3>
+            </div>
+        </div>
+
+        <div class="main">
+
+            <form>
+
+                <h2 class="title">EMAIL ADDRESS * </h2>
+                <input id="email" class="input" type="text" name="email" placeholder="xxx@uniqlo.com">
+
+                <h2 class="title">PASSWORD * </h2>
+                <input id="pass" class="input" type="password" name="password">
+                <p class="smlTxt"> Password must be at least 8 characters, and contain both numbers and alphabet
+                    letters.</p>
+
+                <h2 class="title">PIN CODE * </h2>
+                <input class="input" type="number" name="pincode" placeholder="Please enter pincode">
+                <h2 class="title">BIRTHDAY * </h2>
+                <input class="input" type="date" name="birthday">
+
+                <h2 class="title">GENDER * </h2>
+
+                <label class="radio">
+                    <input class="radio1" type="radio" name="gender">
+                    <span class="checkmark"></span>
+                    Male
+                </label>
+                <label class="radio">
+                    <input class="radio2" type="radio" name="gender">
+                    <span class="checkmark"></span>
+                    Female
+                </label>
+
+                <label class="radio">
+                    <input class="radio3" type="radio" checked="checked" name="gender">
+                    <span class="checkmark"></span>
+                    Unselect
+                </label>
+            </form>
+            <h3 class="subscribe">SUBSCRIBE ME TO UNIQLO’S MAILING LIST</h3>
+
+            <input type="checkbox" name="check" class="check"> <label class="uniqlo">UNIQLO E-newsletter</label>
+
+            <hr>
+
+            <h3 class="sub">MEMBERSHIP AGREEMENT *</h3>
+            <p class="policy">By creating an account, you agree to UNIQLO’s privacy policy and terms of use.</p>
+
+            <input type="checkbox" name="check" class="check"> <label class="uniqlo">I agree to the UNIQLO’s TERMS OF
+                USE and PRIVACY POLICY</label>
+
+            <div class="terms">
+                <ul>
+                    <li>
+                        <a href="">TERMS OF USE</a>
+                        <a href="">PRIVACY POLICY</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="button">
+                <h3> REGISTER </h3>
+            </button>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector(".button").addEventListener("click",signUp);
+    var userArr = JSON.parse(localStorage.getItem("userData"))|| [];
+
+    function signUp() {
+        var email = document.getElementById("email").value;
+        var pass = document.getElementById("pass").value;
+
+        var userCredential={
+            emailAddress:email,
+            passWord:pass,
+        }
+        userArr.push(userCredential);
+        localStorage.setItem("userData",JSON.stringify(userArr));
+
+        window.location.href="LogIn.html";
+    }
+</script>

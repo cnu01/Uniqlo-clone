@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href = 
+"uniqlo_roman_180.png" 
+        type = "image/x-icon">
+    <title>One time Password</title>
+    <style>
+        #otpdiv{
+            width:50%;
+            margin:auto;
+            height:200px;
+            text-align: center;
+            padding-top: 50px;
+            margin-top:200px;
+            box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    <div id="otpdiv">
+        <h1 >OTP</h1>
+
+        <label for="otp">OTP : </label>
+        <input type="Number" placeholder="Enter Otp">
+        <button type="button">Submit</button>
+        <p> * Please do not share that OTP with any one and in case your internet banking or debit 
+            card credentials <br/> are compromised -
+             we recommend you to block that service for safety reasons.</p>
+
+    </div>
+  
+
+</body>
+</html>
+
+
+<script>
+
+    document.querySelector("button").addEventListener("click",otp);
+
+    function otp(){
+    var otp2 = document.querySelector("input").value;
+    if(otp2 == "1234"){
+        window.location.href = "sucess.html"
+    }else{
+        alert("Entered otp is not matching, please Try Again")
+    }
+    }
+
+ 
+
+</script>

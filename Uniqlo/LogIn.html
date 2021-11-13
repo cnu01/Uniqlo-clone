@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="styleSheet" href="Login.css"/>
+    <script src="https://kit.fontawesome.com/aa6d8f6c48.js" crossorigin="anonymous"></script>
+    <title>LOGIN</title>
+</head>
+<body>
+    <div id="log_Page">
+        <div id="log_Logo">
+            <a href="index.html"><img id="log_Pic1"
+                src="https://www.nicepng.com/png/detail/182-1824587_uniqlo-logo-uniqlo-logo-jpg.png" alt="">
+            </a>
+            
+        </div>
+    </div>
+    <hr>
+    <div id="main_Div">
+        <div id="log_In">
+            <div>
+                <div id="log_Div">
+                    <h1>LOGIN</h1>
+                    <p>Required *</p>
+                </div>
+                <div id="log_Div2">
+                    <p>Log in with your email address and password</p>                
+                    <div></div>
+                </div>
+                <p id="red_line">Please do not reuse a password you have used on another service or a password that is easily guessed.</p>
+                <form id="loginForm">
+                    <label>EMAIL ADDRESS *</label>
+                    <input id="email" type="text" placeholder="xxx@uniqlo.com">
+                    <label>PASSWORD *</label>
+                    <input id="pass" type="password">
+                </form>
+                <p id="grey_line">Password must be at least 8 characters, and contain both numbers and alphabet letters.</p>
+                <h4>TERMS OF USE</h4>
+                <h4>PRIVACY POLICY</h4>
+                <button id="btn">LOG IN</button>
+                <h4>FORGOT YOUR PASSWORD?</h4>
+            </div>
+        </div>
+        <div id="creat_Acc">
+            <div id="text">
+                <h1>CREATE AN ACCOUNT</h1>
+                <P>If you create an account, you can get personalized services like checking purchase history and getting discount coupons with your membership. Register today for free!</P>
+                <button id="btnCA">CREATE AN ACCOUNT</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-wrap">
+          <div>
+             <h3>About Uniqlo</h3>
+             <p>information</p>
+             <p>store Location</p>
+          </div>
+          <div>
+              <h3>Help</h3>
+              <p>FAQ</p>
+              <p>Return Policy</p>
+              <p>Privacy Policy</p>
+              <p>Accessibility</p>
+          </div>
+          <div>
+             <h3>Account</h3>
+             <p>Membership</p>
+             <p>Profile</p>
+             <p>Coupons</p>
+          </div>
+          <div id="E-news">
+             <h3>E-Newsletter</h3>
+             <p>sigh up and be the first in-the know about new arrivals,promotions,in-store events and more. </p>
+             <a href="">SUBSCRIBE NOW</a>
+          </div>
+          <div  id="uniqlo-icon" >
+             <h3>UNIQLO SOCIAL ACCOUNT</h3>
+             <div>
+               <i class="fab fa-facebook-square"></i>
+               <i class="fab fa-twitter-square"></i>
+               <i class="fab fa-instagram-square"></i>
+               <i class="fab fa-youtube-square"></i>
+             </div>
+          </div>
+        </div>
+        <h3>English</h3>
+        <div class="footer-bottom">
+            <p>Copyright © UNIQLO Co., Ltd. All rights reserved.</p>
+            <div>
+               <a href="">Terms of use</a>
+               <a href="">Privacy Policy</a>
+            </div>
+        </div>
+     </div>
+</body>
+</html>
+
+<script>
+    document.getElementById("btn").addEventListener("click",signIn);
+    var regdUsers=JSON.parse(localStorage.getItem("userData")) ||[];
+    function signIn(){
+        var email=document.querySelector("#email").value;
+        var pass=document.querySelector("#pass").value;
+        if(email == "admin" && pass== "admin"){
+            window.location.href="admin.html";
+        }else{
+            for(var i=0;i<regdUsers.length;i++){
+                if(
+                    regdUsers[i].emailAddress== email &&
+                    regdUsers[i].passWord==pass
+                ){
+                   
+                    window.location.href="Product.html";
+                    //alert("login successful");
+                
+                }else{
+                    alert("User not Registered");
+                }
+            }
+        }
+    }
+
+    document.getElementById("btnCA").addEventListener("click",signUp);
+    function signUp(){
+        window.location.href="SignUp.html";
+    }
+</script>

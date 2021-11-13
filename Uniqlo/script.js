@@ -19,7 +19,7 @@ if(selected == "High"){
     return b.price-a.price;
   }) 
 }
-showProducts();
+showProducts(prod);
 }
 var mainDiv = document.createElement("div");
   mainDiv.setAttribute("id", "container2");
@@ -195,3 +195,9 @@ price:document.getElementById("price").value,
 prod.push(productObj);
 localStorage.setItem("shoppingBag",JSON.stringify(prod));
 }
+
+
+
+
+// Payment page
+
